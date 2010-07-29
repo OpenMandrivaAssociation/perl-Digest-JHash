@@ -1,5 +1,5 @@
 %define upstream_name    Digest-JHash
-%define upstream_version 0.05
+%define upstream_version 0.06
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,10 +9,7 @@ Summary:    Perl extension for 32 bit Jenkins Hashing Algorithm
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-# We need to convert .gz into .lzma and make world-writable files only
-# user-writable.
-Source0:    http://www.cpan.org/modules/by-module/Digest/%{upstream_name}-%{upstream_version}.tar.lzma
-
+Source0:    http://www.cpan.org/modules/by-module/Digest/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires: perl-devel
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
@@ -33,7 +30,6 @@ See http://burtleburtle.net/bob/hash/doobs.html for more information.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
 %make
 
 %check
@@ -51,5 +47,3 @@ rm -rf %buildroot
 %doc Changes META.yml README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
