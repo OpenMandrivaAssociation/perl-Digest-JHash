@@ -47,3 +47,29 @@ rm -rf %buildroot
 %doc Changes META.yml README
 %{_mandir}/man3/*
 %perl_vendorlib/*
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.70.0-3
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Sun May 29 2011 Funda Wang <fwang@mandriva.org> 0.70.0-2
++ Revision: 681420
+- mass rebuild
+
+* Mon Sep 06 2010 Jérôme Quelin <jquelin@mandriva.org> 0.70.0-1mdv2011.0
++ Revision: 576295
+- update to 0.07
+
+* Thu Jul 29 2010 Jérôme Quelin <jquelin@mandriva.org> 0.60.0-1mdv2011.0
++ Revision: 562995
+- update to 0.06
+
+* Mon Jul 26 2010 Shlomi Fish <shlomif@mandriva.org> 0.50.0-1mdv2011.0
++ Revision: 560763
+- import perl-Digest-JHash
+
+
+* Thu Jul 22 2010 cpan2dist 0.05-1mdv
+- initial mdv release, generated with cpan2dist
