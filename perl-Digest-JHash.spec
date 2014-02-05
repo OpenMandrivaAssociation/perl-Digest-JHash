@@ -1,18 +1,17 @@
 %define upstream_name    Digest-JHash
-%define upstream_version 0.07
+%define upstream_version 0.08
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:    Perl extension for 32 bit Jenkins Hashing Algorithm
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Digest/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Digest/Digest-JHash-%{upstream_version}.tar.gz
 
 BuildRequires: perl-devel
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The 'Digest::JHash' module allows you to use the fast JHash hashing
@@ -36,14 +35,11 @@ See http://burtleburtle.net/bob/hash/doobs.html for more information.
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
 %clean
-rm -rf %buildroot
 
 %files
-%defattr(-,root,root)
 %doc Changes META.yml README
 %{_mandir}/man3/*
 %perl_vendorlib/*
@@ -73,3 +69,4 @@ rm -rf %buildroot
 
 * Thu Jul 22 2010 cpan2dist 0.05-1mdv
 - initial mdv release, generated with cpan2dist
+
