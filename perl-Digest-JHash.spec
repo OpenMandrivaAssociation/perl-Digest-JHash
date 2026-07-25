@@ -1,15 +1,15 @@
 %define upstream_name    Digest-JHash
-%define upstream_version 0.08
+%define upstream_version 0.10
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	3
+Version:    %{upstream_version}
+Release:	1
 
 Summary:    Perl extension for 32 bit Jenkins Hashing Algorithm
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Digest/Digest-JHash-%{upstream_version}.tar.gz
+Url:        https://github.com/shlomif/perl-Digest-JHash
+Source0:    https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Digest-JHash-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl-devel
